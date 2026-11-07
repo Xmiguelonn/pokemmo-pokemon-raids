@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokéMMO Raids - Guía Definitiva</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pokeRed: '#FF0000',
+            pokeDarkRed: '#CC0000',
+            pokeBlue: '#3B4CCA',
+            pokeYellow: '#FFDE00',
+            pokeGold: '#B3A125'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col">
+
+  <!-- Header Header -->
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="bg-red-600 text-white p-2 rounded-xl shadow-md">
+          <i class="fa-solid fa-gamepad text-xl"></i>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight tracking-wide bg-gradient-to-r from-red-600 to-amber-500 bg-clip-text text-transparent">PokéMMO Raids</h1>
+          <p class="text-xs text-gray-500 dark:text-gray-400">por <span class="font-semibold text-gray-700 dark:text-gray-300">MigueCabeza</span></p>
+        </div>
+      </div>
+
+      <!-- Live Search Bar -->
+      <div class="flex-1 max-w-md relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        <input type="text" id="searchInput" placeholder="Buscar Pokémon, tipo, habilidad, movimiento..." 
+          class="w-full pl-9 pr-4 py-2 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 dark:focus:ring-red-400 transition-all">
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-yellow-400 transition-colors">
+          <i class="fa-solid fa-moon dark:hidden"></i>
+          <i class="fa-solid fa-sun hidden dark:inline"></i>
+        </button>
+        <a href="https://twitch.tv/xmiguelonn_" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-3.5 py-2 rounded-xl text-xs font-semibold shadow-md transition-all">
+          <i class="fa-brands fa-twitch text-sm"></i>
+          <span>Twitch</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 flex gap-6">
+    
+    <!-- Left Navigation Sidebar -->
+    <aside class="hidden lg:block w-64 shrink-0">
+      <div class="sticky top-22 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-4 shadow-sm custom-scrollbar max-h-[calc(100vh-6rem)] overflow-y-auto">
+        <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-2">Categorías de Raids</h2>
+        <nav id="sidebarNav" class="space-y-1"></nav>
+      </div>
+    </aside>
+
+    <!-- Content Area -->
+    <main id="mainContent" class="flex-1 space-y-4 min-w-0"></main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-6 mt-12 text-center text-xs text-gray-500 dark:text-gray-400">
+    <p class="font-medium">PokéMMO Raids Guide • Creado por <span class="text-red-500 font-bold">MigueCabeza</span></p>
+    <p class="mt-1">Visita el canal de Twitch: <a href="https://twitch.tv/xmiguelonn_" target="_blank" class="text-purple-500 hover:underline">twitch.tv/xmiguelonn_</a></p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
